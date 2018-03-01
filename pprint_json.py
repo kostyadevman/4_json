@@ -26,6 +26,6 @@ if __name__ == '__main__':
         print('Usage: python pprint_json.py <path to file>')
     else:
         json_data = load_data(sys.argv[1])
-        if data != None:
-            pretty_print_json(data)
+        if json_data != None:
+            pretty_print_json(json_data)
 
