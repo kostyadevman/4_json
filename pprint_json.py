@@ -16,8 +16,8 @@ def load_data(filepath):
         print("File '{}' doesn't exists".format(filepath))
         return None
 
-def pretty_print_json(data):
-    pretty_json_data = json.dumps(data, ensure_ascii=False, indent=4)
+def pretty_print_json(json_data):
+    pretty_json_data = json.dumps(json_data, ensure_ascii=False, indent=4)
     print(pretty_json_data)
 
 
