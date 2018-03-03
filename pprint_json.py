@@ -19,11 +19,9 @@ def pretty_print_json(json_content):
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         print('Usage: python pprint_json.py <path to file>')
-    else:
-        json_content = load_data(sys.argv[1])
-        if json_content:
-            pretty_json_content = pretty_print_json(json_content)
-            print(pretty_json_content)
-        else:
-            print("File doesn't exist")
+        exit(1)
+    json_content = load_data(sys.argv[1])
+    if json_content:
+        pretty_json_content = pretty_print_json(json_content)
+        print(pretty_json_content)
 
