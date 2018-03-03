@@ -10,7 +10,7 @@ def load_data(filepath):
         return json_content
 
 
-def pretty_print_json(json_content):
+def pretty_json(json_content):
     pretty_json_content = json.dumps(json_content, ensure_ascii=False, indent=4)
 
     return pretty_json_content
@@ -18,10 +18,9 @@ def pretty_print_json(json_content):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print('Usage: python pprint_json.py <path to file>')
-        exit(1)
+        exit('Usage: python pprint_json.py <path to file>')
     json_content = load_data(sys.argv[1])
     if json_content:
-        pretty_json_content = pretty_print_json(json_content)
+        pretty_json_content = pretty_json(json_content)
         print(pretty_json_content)
 
