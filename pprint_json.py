@@ -5,24 +5,24 @@ import os
 def load_data(filepath):
     if os.path.isfile(filepath):
         with open(filepath, 'r') as infile:
-            json_data = json.loads(infile.read())
-        return json_data
+            json_content = json.loads(infile.read())
+        return json_content
     else:
         return None
 
-def pretty_print_json(json_data):
-    pretty_json_data = json.dumps(json_data, ensure_ascii=False, indent=4)
+def pretty_print_json(json_content):
+    pretty_json_content = json.dumps(json_content, ensure_ascii=False, indent=4)
 
-    return pretty_print_json()
+    return pretty_json_content
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         print('Usage: python pprint_json.py <path to file>')
     else:
-        json_data = load_data(sys.argv[1])
-        if json_data:
-            pretty_json_data = pretty_print_json(json_data)
-            print(pretty_json_data)
+        json_content = load_data(sys.argv[1])
+        if json_content:
+            pretty_json_content = pretty_print_json(json_content)
+            print(pretty_json_content)
         else:
             print('File doesn\'t exist')
 
