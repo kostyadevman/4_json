@@ -1,6 +1,6 @@
 # Prettify JSON
 
-pprint_json.py provides a capability to "pretty-print" arbitrary JSON data structures in a well-formatted and more readable way!
+**pprint_json.py** provides a capability to "pretty-print" arbitrary JSON data structures in a well-formatted and more readable way!
 
 # Quickstart
 Content of raw JSON file:
